@@ -1,0 +1,48 @@
+
+package com.probando.segunda.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+@Entity
+public class Estudio {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    
+    private String tiempo;
+    private String titulo;
+    private String descripcion;
+    private String otrasNotas;
+    private String imagen;   
+    private boolean editar;
+
+    @ManyToOne
+    @JoinColumn(name = "persona_id")
+    private Persona persona;
+     
+    public Estudio() {
+    }
+
+    public Estudio(Long id, String tiempo, String titulo, String descripcion, String otrasNotas, String imagen, boolean editar, Persona persona) {
+        this.id = id;
+        this.tiempo = tiempo;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.otrasNotas = otrasNotas;
+        this.imagen = imagen;
+        this.editar = editar;
+        this.persona = persona;
+    }
+
+    
+
+}
