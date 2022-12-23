@@ -11,9 +11,6 @@ import com.probando.segunda.service.IPersonaService;
 import com.probando.segunda.service.IProyectoService;
 import com.probando.segunda.service.IUsuarioService;
 import java.util.List;
-import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -88,11 +85,47 @@ public class Controller {
     }
     
     @DeleteMapping ("/estudios/{id}")
+    @ResponseBody
     public List<Estudio> deleteEstudio (@PathVariable Long id){
         return estudioServ.deleteEstudio(id);
     }
     
-  @PutMapping ("estudios/{id}")
+    @PutMapping ("estudios/{id}")
+    @ResponseBody
+    public Estudio editEstudio (@PathVariable Long id, @RequestBody Estudio estudio) {
+    Estudio est = estudioServ.findEstudio(id);
+        est.setTiempo(estudio.getTiempo());
+        est.setTitulo(estudio.getTitulo());
+        est.setDescripcion(estudio.getDescripcion());
+        est.setEditar(false);
+    return estudioServ.saveEstudio(est);
+    }
+    
+    @GetMapping("estudios/{id}")
+    @ResponseBody
+    public Estudio findEstudio(@PathVariable Long id){
+        return estudioServ.findEstudio(id);
+    }
+
+    /*@PutMapping ("estudios/{id}")
+@ResponseBody
+public Estudio editEstudio (@RequestBody @PathVariable Long id){
+    System.out.println("Entrando a la función editEstudio");
+    Estudio est = estudioServ.findEstudio(id);
+    System.out.println("Valor de est después de llamar a findEstudio: " + est);
+    est = estudioServ.saveEstudio(est);
+    System.out.println("Saliendo de la función editEstudio: " + est);
+    return est;
+}*/
+
+  /*   @PutMapping ("estudios/{id}")
+     @ResponseBody
+    public Estudio editEstudio (@RequestBody @PathVariable Long id){
+        Estudio est = estudioServ.findEstudio(id);
+        return estudioServ.saveEstudio(est);
+    }*/
+    
+  /*@PutMapping ("estudios/{id}")
     public String editEstudio (@PathVariable Long id,
                                @RequestParam("tiempo") String nuevoTiempo,
                                @RequestParam("titulo") String nuevoTitulo,
@@ -104,7 +137,7 @@ public class Controller {
         est.setEditar(false);
         estudioServ.saveEstudio(est);
         return "El estudio ha sido editado";
-    }
+    }*/
     
     
     
@@ -131,18 +164,15 @@ public class Controller {
     }
  
     @PutMapping ("experiencias/{id}")
-    public String editExperiencia (@PathVariable Long id,
-                               @RequestParam("tiempo") String nuevoTiempo,
-                               @RequestParam("titulo") String nuevoTitulo,
-                               @RequestParam("descripcion") String nuevaDescripcion){
-        Experiencia exp = experienciaServ.findExperiencia(id);
-        exp.setTiempo(nuevoTiempo);
-        exp.setTitulo(nuevoTitulo);
-        exp.setDescripcion(nuevaDescripcion);
+    @ResponseBody
+    public Experiencia editExperiencia (@PathVariable Long id, @RequestBody Experiencia experiencia) {
+    Experiencia exp = experienciaServ.findExperiencia(id);
+        exp.setTiempo(experiencia.getTiempo());
+        exp.setTitulo(experiencia.getTitulo());
+        exp.setDescripcion(experiencia.getDescripcion());
         exp.setEditar(false);
-        experienciaServ.saveExperiencia(exp);
-        return "La experiencia ha sido editada";
-    }
+    return experienciaServ.saveExperiencia(exp);
+}
       
     
     

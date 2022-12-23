@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +19,7 @@ public class Estudio {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
+    @NotNull
     private String tiempo;
     private String titulo;
     private String descripcion;
@@ -42,6 +44,16 @@ public class Estudio {
         this.editar = editar;
         this.persona = persona;
     }
+    
+    @Override
+public String toString() {
+    return "Estudio{" +
+            "id=" + id +
+            ", nombre='" + titulo + '\'' +
+            ", descripcion='" + descripcion + '\'' +
+            '}';
+}
+
 
     
 
