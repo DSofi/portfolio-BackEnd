@@ -19,19 +19,14 @@ public class PersonaService implements IPersonaService{
     }
 
     @Override
-    public void savePersona(Persona pers) {
-        if (pers != null){
-            if (!"".equals(pers.getNombre()) && !"".equals(pers.getSobreMi())){
-            persoRepo.save(pers);}
-        }}
-        
-
-    
+    public Persona savePersona(Persona pers) {
+        return persoRepo.save(pers);
+    }
 
     @Override
-    public void deletePersona(Long id) {
+    public List<Persona> deletePersona(Long id) {
         persoRepo.deleteById(id);
-
+        return persoRepo.findAll();
     }
 
     @Override

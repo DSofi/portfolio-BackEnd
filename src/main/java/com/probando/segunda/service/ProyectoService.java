@@ -19,18 +19,18 @@ public class ProyectoService implements IProyectoService{
     }
 
     @Override
-    public void saveProyecto(Proyecto proy) {
-        proyectoRepo.save(proy);
+    public Proyecto saveProyecto(Proyecto proy) {
+        return proyectoRepo.save(proy);
     }
 
     @Override
-    public void deleteProyecto(Long id) {
+    public List<Proyecto> deleteProyecto(Long id) {
         proyectoRepo.deleteById(id);
+        return proyectoRepo.findAll();
     }
 
     @Override
     public Proyecto findProyecto(Long id) {
         return proyectoRepo.findById(id).orElse(null);
     }
-    
 }

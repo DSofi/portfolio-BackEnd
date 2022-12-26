@@ -17,16 +17,21 @@ import lombok.Setter;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
    
     @NotNull 
     @NotBlank
-    @Size(min = 3, max = 50)
+    @Size(min = 5, max = 12)
     private String user;
-    private String email;
+    
+    @NotNull 
+    @NotBlank
+    @Size(min = 8, max = 12)    
     private String password;
-    private String puedeEditar;
+     
+    private String email;
+    private boolean puedeEditar;
     
     @OneToOne
     private Persona persona;
@@ -34,7 +39,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long id, String user, String email, String password, String puedeEditar, Persona persona) {
+    public Usuario(Long id, String user, String email, String password, boolean puedeEditar, Persona persona) {
         this.id = id;
         this.user = user;
         this.email = email;

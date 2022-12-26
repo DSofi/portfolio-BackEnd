@@ -22,7 +22,6 @@ public class EstudioService implements IEstudioService {
     public Estudio saveEstudio(Estudio est) {
         System.out.println("Guardando desde el servicio: " + est);
         return estudioRepo.save(est);
-        
     }
 
     @Override
