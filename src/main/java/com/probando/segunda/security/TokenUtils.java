@@ -13,7 +13,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 
 public class TokenUtils {
     
-    private final static String ACCESS_TOKEN_SECRET = "Umka8jy4DH2H67fCtNnekf4gDW63";
+    private final static String ACCESS_TOKEN_SECRET = "Umka8jy4DH2H67fCtNnekf4gDW63keRqf58kLm19j";
     private final static Long ACCESS_TOKEN_VALIDITY_SECONDS = 432_000L;
     
     public static String createToken(String nombre){

@@ -25,7 +25,7 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public String getUsername() {
-        return usuario.getEmail();
+        return usuario.getUser();
     }
 
     @Override
@@ -48,8 +48,8 @@ public class UserDetailsImpl implements UserDetails {
         return true;
     }
     
-    public String getUser(){
-        return usuario.getUser();
+    public String getEmail(){
+        return usuario.getEmail();
     }
 
     
