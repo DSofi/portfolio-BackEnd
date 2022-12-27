@@ -3,6 +3,7 @@ package com.probando.segunda.controller;
 
 import com.probando.segunda.model.Estudio;
 import com.probando.segunda.service.IEstudioService;
+import jakarta.annotation.security.PermitAll;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,6 +23,7 @@ public class EstudioController {
         @Autowired
     private IEstudioService estudioServ;
     
+       @PermitAll
     @GetMapping ("/estudios")
     @ResponseBody
     public List<Estudio> getEstudios(){
