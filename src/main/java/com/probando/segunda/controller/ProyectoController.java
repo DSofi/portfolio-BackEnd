@@ -46,6 +46,7 @@ public class ProyectoController {
         proy.setTiempo(proyecto.getTiempo());
         proy.setTitulo(proyecto.getTitulo());
         proy.setDescripcion(proyecto.getDescripcion());
+        proy.setOtrasNotas(proyecto.getOtrasNotas());
         proy.setEditar(false);
         return proyectoServ.saveProyecto(proy);
     }

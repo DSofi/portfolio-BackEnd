@@ -23,7 +23,7 @@ public class EstudioController {
         @Autowired
     private IEstudioService estudioServ;
     
-       @PermitAll
+    
     @GetMapping ("/estudios")
     @ResponseBody
     public List<Estudio> getEstudios(){
@@ -49,6 +49,7 @@ public class EstudioController {
         est.setTiempo(estudio.getTiempo());
         est.setTitulo(estudio.getTitulo());
         est.setDescripcion(estudio.getDescripcion());
+        est.setOtrasNotas(estudio.getOtrasNotas());
         est.setEditar(false);
     return estudioServ.saveEstudio(est);
     }

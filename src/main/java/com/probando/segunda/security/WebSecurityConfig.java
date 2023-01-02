@@ -36,7 +36,7 @@ public class WebSecurityConfig {
                 .cors().and()
                 .csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers(HttpMethod.GET, "/estudios", "/experiencias", "/personas", "/proyectos").permitAll()
+                .requestMatchers(HttpMethod.GET, "/estudios", "/experiencias", "/personas", "/proyectos", "/idiomas", "/skills", "/tipo-skills").permitAll()
                     .anyRequest()
                     .authenticated()
                     .and()
