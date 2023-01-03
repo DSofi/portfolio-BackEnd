@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import java.util.List;
 import javax.validation.constraints.NotNull;
@@ -25,9 +24,6 @@ public class Tiposkill {
     
      @OneToMany(mappedBy = "tiposkill")
     private List<Skill> skills;
-    
-    
-    /*= new ArrayList<>();*/
 
     public Tiposkill() {
     }
@@ -37,8 +33,4 @@ public class Tiposkill {
         this.nombre = nombre;
         this.skills = skills;
     }
-
-  
-
-       
 }
