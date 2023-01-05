@@ -9,4 +9,5 @@ public interface IExperienciaService {
     public Experiencia saveExperiencia (Experiencia exp);
     public List<Experiencia> deleteExperiencia (Long id);
     public Experiencia findExperiencia (Long id); 
+    public List<Experiencia> orderExperiencias(List<Experiencia> experiencias);
 }

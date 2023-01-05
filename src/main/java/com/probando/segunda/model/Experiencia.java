@@ -24,6 +24,7 @@ public class Experiencia {
     private String otrasNotas;
     private String imagen;   
     private boolean editar;
+    private int orden;
     
     @ManyToOne
     @JoinColumn(name = "persona_id")
@@ -32,7 +33,7 @@ public class Experiencia {
     public Experiencia() {
     }
 
-    public Experiencia(Long id, String tiempo, String titulo, String descripcion, String otrasNotas, String imagen, boolean editar, Persona persona) {
+    public Experiencia(Long id, String tiempo, String titulo, String descripcion, String otrasNotas, String imagen, boolean editar, int orden, Persona persona) {
         this.id = id;
         this.tiempo = tiempo;
         this.titulo = titulo;
@@ -40,16 +41,7 @@ public class Experiencia {
         this.otrasNotas = otrasNotas;
         this.imagen = imagen;
         this.editar = editar;
+        this.orden = orden;
         this.persona = persona;
     }
-
-    
-
-    
-
-   
-
-    
-    
-    
 }

@@ -50,4 +50,10 @@ public class ProyectoController {
         proy.setEditar(false);
         return proyectoServ.saveProyecto(proy);
     }
+    
+    @PutMapping("/proyectos/order")
+    @ResponseBody
+    public List<Proyecto> orderProyectos(@RequestBody List<Proyecto> proyectos){
+        return proyectoServ.orderProyectos(proyectos);
+    }
 }

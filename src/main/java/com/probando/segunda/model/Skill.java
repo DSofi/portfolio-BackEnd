@@ -25,6 +25,8 @@ public class Skill {
     @NotNull
     private String imagen;   
     
+    private int orden;
+    
     @ManyToOne
     @JoinColumn (name = "tiposkill_id")
     private Tiposkill tiposkill;
@@ -32,10 +34,13 @@ public class Skill {
     public Skill() {
     }
 
-    public Skill(Long id, String nombre, String imagen, Tiposkill tipoSkill) {
+    public Skill(Long id, String nombre, String imagen, int orden, Tiposkill tiposkill) {
         this.id = id;
         this.nombre = nombre;
         this.imagen = imagen;
-        this.tiposkill = tipoSkill;
+        this.orden = orden;
+        this.tiposkill = tiposkill;
     }
+
+    
 }

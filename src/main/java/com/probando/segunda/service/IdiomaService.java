@@ -13,9 +13,10 @@ public class IdiomaService implements IIdiomaService {
     @Autowired
     private IdiomaRepository idiomaRepo;
 
+
     @Override
     public List<Idioma> getIdiomas() {
-        return idiomaRepo.findAll();
+        return idiomaRepo.findAllOrdered();
     }
 
     @Override
@@ -26,12 +27,23 @@ public class IdiomaService implements IIdiomaService {
     @Override
     public List<Idioma> deleteIdioma(Long id) {
         idiomaRepo.deleteById(id);
-        return idiomaRepo.findAll();
+        return idiomaRepo.findAllOrdered();
     }
 
     @Override
     public Idioma findIdioma(Long id) {
         return idiomaRepo.findById(id).orElse(null);
+    }
+    
+    @Override
+    public List<Idioma> orderIdiomas(List<Idioma> idiomas) {
+    for (int i = 0; i < idiomas.size(); i++) {
+            Idioma idioma = idiomas.get(i);
+            idioma.setOrden(i);
+            idiomaRepo.save(idioma); 
+            idiomaRepo.updateOrden(idioma.getId(), i);
+        }
+       return idiomaRepo.findAllOrdered();
     }
     
 }

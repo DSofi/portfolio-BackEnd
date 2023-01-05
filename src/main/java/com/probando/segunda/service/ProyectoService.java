@@ -15,7 +15,7 @@ public class ProyectoService implements IProyectoService{
 
     @Override
     public List<Proyecto> getProyectos() {
-        return proyectoRepo.findAll();
+        return proyectoRepo.findAllOrdered();
     }
 
     @Override
@@ -26,11 +26,22 @@ public class ProyectoService implements IProyectoService{
     @Override
     public List<Proyecto> deleteProyecto(Long id) {
         proyectoRepo.deleteById(id);
-        return proyectoRepo.findAll();
+        return proyectoRepo.findAllOrdered();
     }
 
     @Override
     public Proyecto findProyecto(Long id) {
         return proyectoRepo.findById(id).orElse(null);
+    }
+    
+    @Override
+    public List<Proyecto> orderProyectos(List<Proyecto> proyectos) {
+    for (int i = 0; i < proyectos.size(); i++) {
+            Proyecto proyecto = proyectos.get(i);
+            proyecto.setOrden(i);
+            proyectoRepo.save(proyecto); 
+            proyectoRepo.updateOrden(proyecto.getId(), i);
+        }
+       return proyectoRepo.findAllOrdered();
     }
 }

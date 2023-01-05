@@ -49,4 +49,10 @@ public class SkillController {
         sk.setTiposkill(skill.getTiposkill());       
         return skillServ.saveSkill(sk);
     }    
+    
+    @PutMapping("/skills/order")
+    @ResponseBody
+    public List<Skill> orderSkills(@RequestBody List<Skill> skills){
+        return skillServ.orderSkills(skills);
+    }
 }

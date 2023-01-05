@@ -57,5 +57,11 @@ public class IdiomaController {
     public Idioma findIdioma(@PathVariable Long id){
         return idiomaServ.findIdioma(id);
     }
+    
+    @PutMapping("/idiomas/order")
+    @ResponseBody
+    public List<Idioma> orderIdiomas(@RequestBody List<Idioma> idiomas){
+        return idiomaServ.orderIdiomas(idiomas);
+    }
 }
     

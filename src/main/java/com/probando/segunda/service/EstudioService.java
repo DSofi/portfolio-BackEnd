@@ -15,24 +15,34 @@ public class EstudioService implements IEstudioService {
     
     @Override
     public List<Estudio> getEstudios() {
-        return estudioRepo.findAll();
+        return estudioRepo.findAllOrdered();
     }
 
     @Override
     public Estudio saveEstudio(Estudio est) {
-        System.out.println("Guardando desde el servicio: " + est);
         return estudioRepo.save(est);
     }
 
     @Override
     public List<Estudio> deleteEstudio(Long id) {
         estudioRepo.deleteById(id);
-        return estudioRepo.findAll();
+        return estudioRepo.findAllOrdered();
     }
 
     @Override
     public Estudio findEstudio(Long id) {
         return estudioRepo.findById(id).orElse(null);
     }
+    @Override
+    public List<Estudio> orderEstudios(List<Estudio> estudios) {
+    for (int i = 0; i < estudios.size(); i++) {
+            Estudio estudio = estudios.get(i);
+            estudio.setOrden(i);
+            estudioRepo.save(estudio); 
+            estudioRepo.updateOrden(estudio.getId(), i);
+        }
+       return estudioRepo.findAllOrdered();
+    }
+    
     
 }

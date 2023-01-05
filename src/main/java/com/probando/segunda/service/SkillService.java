@@ -15,7 +15,7 @@ public class SkillService implements ISkillService {
 
     @Override
     public List<Skill> getSkills() {
-        return skillRepo.findAll();
+        return skillRepo.findAllOrdered();
     }
 
     @Override
@@ -26,12 +26,23 @@ public class SkillService implements ISkillService {
     @Override
     public List<Skill> deleteSkill(Long id) {
         skillRepo.deleteById(id);
-        return skillRepo.findAll();
+        return skillRepo.findAllOrdered();
     }
 
     @Override
     public Skill findSkill(Long id) {
         return skillRepo.findById(id).orElse(null);
+    }
+    
+    @Override
+    public List<Skill> orderSkills(List<Skill> skills) {
+    for (int i = 0; i < skills.size(); i++) {
+            Skill skill = skills.get(i);
+            skill.setOrden(i);
+            skillRepo.save(skill); 
+            skillRepo.updateOrden(skill.getId(), i);
+        }
+       return skillRepo.findAllOrdered();
     }
     
 }

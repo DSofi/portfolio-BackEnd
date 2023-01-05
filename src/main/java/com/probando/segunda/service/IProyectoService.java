@@ -9,4 +9,5 @@ public interface IProyectoService {
     public Proyecto saveProyecto (Proyecto proy);
     public List<Proyecto> deleteProyecto (Long id);
     public Proyecto findProyecto (Long id);
+    public List<Proyecto> orderProyectos(List<Proyecto> proyectos);
 }

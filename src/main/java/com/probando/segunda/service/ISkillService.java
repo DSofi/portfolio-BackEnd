@@ -9,4 +9,5 @@ public interface ISkillService {
     public Skill saveSkill(Skill skill);
     public List<Skill> deleteSkill (Long id);
     public Skill findSkill (Long id);
+    public List<Skill> orderSkills(List<Skill> skills);
 }

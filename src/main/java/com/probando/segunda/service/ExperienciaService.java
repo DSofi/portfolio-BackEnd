@@ -15,7 +15,7 @@ public class ExperienciaService implements IExperienciaService{
 
     @Override
     public List<Experiencia> getExperiencias() {
-        return experienciaRepo.findAll();
+        return experienciaRepo.findAllOrdered();
     }
 
     @Override
@@ -26,12 +26,23 @@ public class ExperienciaService implements IExperienciaService{
     @Override
     public List<Experiencia> deleteExperiencia(Long id) {
         experienciaRepo.deleteById(id);
-        return experienciaRepo.findAll();
+        return experienciaRepo.findAllOrdered();
     }
 
     @Override
     public Experiencia findExperiencia(Long id) {
         return experienciaRepo.findById(id).orElse(null);
+    }
+    
+    @Override
+    public List<Experiencia> orderExperiencias(List<Experiencia> experiencias) {
+    for (int i = 0; i < experiencias.size(); i++) {
+            Experiencia experiencia = experiencias.get(i);
+            experiencia.setOrden(i);
+            experienciaRepo.save(experiencia); 
+            experienciaRepo.updateOrden(experiencia.getId(), i);
+        }
+       return experienciaRepo.findAllOrdered();
     }
     
 }
