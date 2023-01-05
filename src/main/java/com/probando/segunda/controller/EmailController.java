@@ -1,0 +1,23 @@
+
+package com.probando.segunda.controller;
+
+import com.probando.segunda.model.Email;
+import com.probando.segunda.service.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmailController {
+    
+    @Autowired
+    private EmailService emailServ;
+    
+    @PostMapping("/send-email")
+    public String sendEmail(@RequestBody Email datos){
+        return emailServ.sendEmail(datos);
+    }
+    
+}
