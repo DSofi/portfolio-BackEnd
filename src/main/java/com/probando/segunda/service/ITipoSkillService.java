@@ -8,6 +8,5 @@ public interface ITipoSkillService {
     public List<Tiposkill> getTipoSkills();
     public Tiposkill saveTipoSkill (Tiposkill tipoSkill);
     public List<Tiposkill> deleteTipoSkill (Long id);
-    public Tiposkill findTipoSkill (Long id);
-    
+    public Tiposkill findTipoSkill (Long id);    
 }

@@ -22,7 +22,7 @@ public class Tiposkill {
     @NotNull
     private String nombre;
     
-     @OneToMany(mappedBy = "tiposkill")
+    @OneToMany(mappedBy = "tiposkill")
     private List<Skill> skills;
 
     public Tiposkill() {

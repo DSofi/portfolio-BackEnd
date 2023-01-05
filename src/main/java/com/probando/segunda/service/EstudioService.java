@@ -42,7 +42,5 @@ public class EstudioService implements IEstudioService {
             estudioRepo.updateOrden(estudio.getId(), i);
         }
        return estudioRepo.findAllOrdered();
-    }
-    
-    
+    }    
 }

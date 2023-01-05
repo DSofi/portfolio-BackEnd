@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+/*@CrossOrigin(origins = "*", allowedHeaders = "*")*/
 public class UsuarioController {
     
-        @Autowired
+    @Autowired
     private IUsuarioService usuarioServ;
     
-@PostMapping("/iniciar-sesion")
-@ResponseBody
-    public ResponseEntity<Object> login (@RequestBody Usuario user){
-        return usuarioServ.login(user.getUser(), user.getPassword());
-    }
+    @PostMapping("/iniciar-sesion")
+    @ResponseBody
+        public ResponseEntity<Object> login (@RequestBody Usuario user){
+            return usuarioServ.login(user.getUser(), user.getPassword());
+        }
     
     @PostMapping("/usuarios")
     @ResponseBody
@@ -32,7 +32,7 @@ public class UsuarioController {
         return usuarioServ.saveUsuario(user);
     }    
     
-      @PutMapping ("usuarios/{id}")
+    @PutMapping ("usuarios/{id}")
     public Usuario editUsuario (@PathVariable Long id,
                                @RequestBody Usuario usuario){
         Usuario user = usuarioServ.findUsuario(id);

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProyectoRepository extends JpaRepository <Proyecto, Long>{
     
-     @Modifying
+    @Modifying
     @Query("UPDATE Proyecto p SET p.orden = :orden WHERE p.id = :id")
     @Transactional
     void updateOrden(@Param("id") Long id, @Param("orden") int orden);

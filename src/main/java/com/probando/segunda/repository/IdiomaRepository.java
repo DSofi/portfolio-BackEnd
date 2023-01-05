@@ -20,6 +20,5 @@ public interface IdiomaRepository  extends JpaRepository <Idioma, Long>{
     
     @Query("SELECT i FROM Idioma i ORDER BY i.orden ASC")
     List<Idioma> findAllOrdered();
-
     
 }

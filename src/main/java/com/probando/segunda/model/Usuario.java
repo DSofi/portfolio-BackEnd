@@ -46,6 +46,5 @@ public class Usuario {
         this.password = password;
         this.puedeEditar = puedeEditar;
         this.persona = persona;
-    }
-    
+    }    
 }

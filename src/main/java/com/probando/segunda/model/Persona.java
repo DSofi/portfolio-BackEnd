@@ -30,7 +30,7 @@ public class Persona {
     private String titulo;
     
     @NotNull
-    @Size(min=3, max=500)
+    @Size(min=3, max=900)
     private String sobreMi;
     
     private String foto; 

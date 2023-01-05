@@ -17,9 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EstudioController {
     
-        @Autowired
-    private IEstudioService estudioServ;
-    
+    @Autowired
+    private IEstudioService estudioServ;    
     
     @GetMapping ("/estudios")
     @ResponseBody
@@ -27,7 +26,7 @@ public class EstudioController {
         return estudioServ.getEstudios();
     }
     
-     @PostMapping ("/estudios")
+    @PostMapping ("/estudios")
     @ResponseBody
     public Estudio createEstudio(@RequestBody Estudio est){
        return estudioServ.saveEstudio(est);
@@ -61,5 +60,5 @@ public class EstudioController {
     @ResponseBody
     public List<Estudio> orderEstudios(@RequestBody List<Estudio> estudios){
         return estudioServ.orderEstudios(estudios);
-    }
+    }    
 }

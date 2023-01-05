@@ -47,8 +47,7 @@ public class Idioma {
         this.editar = editar;
         this.orden = orden;
         this.persona = persona;
-    }
-    
+    }    
 }
     
 

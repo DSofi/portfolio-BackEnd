@@ -51,6 +51,5 @@ public class UploadImageService implements IUploadImageService{
     
     public Path getPath(String filename){
         return Paths.get(UPLOADS_FOLDER).resolve(filename).toAbsolutePath();
-    }
-    
+    }    
 }

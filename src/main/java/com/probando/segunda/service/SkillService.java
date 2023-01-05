@@ -43,6 +43,5 @@ public class SkillService implements ISkillService {
             skillRepo.updateOrden(skill.getId(), i);
         }
        return skillRepo.findAllOrdered();
-    }
-    
+    }    
 }

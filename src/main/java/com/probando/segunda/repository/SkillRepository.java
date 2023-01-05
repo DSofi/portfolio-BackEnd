@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SkillRepository extends JpaRepository<Skill, Long> {
     
-     @Modifying
+    @Modifying
     @Query("UPDATE Skill s SET s.orden = :orden WHERE s.id = :id")
     @Transactional
     void updateOrden(@Param("id") Long id, @Param("orden") int orden);

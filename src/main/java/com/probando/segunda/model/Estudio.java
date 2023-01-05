@@ -46,13 +46,4 @@ public class Estudio {
         this.orden = orden;
         this.persona = persona;
     }
-    
-    /*@Override
-    public String toString() {
-    return "Estudio{" +
-            "id=" + id +
-            ", nombre='" + titulo + '\'' +
-            ", descripcion='" + descripcion + '\'' +
-            '}';
-}*/
 }

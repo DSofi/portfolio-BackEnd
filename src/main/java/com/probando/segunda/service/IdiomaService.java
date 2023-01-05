@@ -13,7 +13,6 @@ public class IdiomaService implements IIdiomaService {
     @Autowired
     private IdiomaRepository idiomaRepo;
 
-
     @Override
     public List<Idioma> getIdiomas() {
         return idiomaRepo.findAllOrdered();
@@ -44,6 +43,5 @@ public class IdiomaService implements IIdiomaService {
             idiomaRepo.updateOrden(idioma.getId(), i);
         }
        return idiomaRepo.findAllOrdered();
-    }
-    
+    }    
 }

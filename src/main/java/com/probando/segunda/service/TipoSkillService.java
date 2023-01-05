@@ -32,6 +32,5 @@ public class TipoSkillService implements ITipoSkillService {
     @Override
     public Tiposkill findTipoSkill(Long id) {
         return tipoSkillRepo.findById(id).orElse(null);
-    }
-    
+    }    
 }

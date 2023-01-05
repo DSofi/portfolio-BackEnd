@@ -23,8 +23,7 @@ public class Skill {
     private String nombre;
     
     @NotNull
-    private String imagen;   
-    
+    private String imagen;    
     private int orden;
     
     @ManyToOne
@@ -40,7 +39,5 @@ public class Skill {
         this.imagen = imagen;
         this.orden = orden;
         this.tiposkill = tiposkill;
-    }
-
-    
+    }    
 }
