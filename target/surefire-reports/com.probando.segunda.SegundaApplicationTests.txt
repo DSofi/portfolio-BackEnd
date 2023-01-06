@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.probando.segunda.SegundaApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.183 s - in com.probando.segunda.SegundaApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 53.964 s - in com.probando.segunda.SegundaApplicationTests
