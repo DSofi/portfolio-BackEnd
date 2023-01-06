@@ -39,7 +39,6 @@ public class UsuarioController {
         user.setUser(usuario.getUser());
         user.setPassword(usuario.getPassword());
         user.setEmail(usuario.getEmail());
-        user.setPersona(usuario.getPersona());
         return usuarioServ.saveUsuario(user);
     }    
 }
