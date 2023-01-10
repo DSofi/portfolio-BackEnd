@@ -32,7 +32,7 @@ public class UsuarioController {
         return usuarioServ.saveUsuario(user);
     }    
     
-    @PutMapping ("usuarios/{id}")
+    /*@PutMapping ("usuarios/{id}")
     public Usuario editUsuario (@PathVariable Long id,
                                @RequestBody Usuario usuario){
         Usuario user = usuarioServ.findUsuario(id);
@@ -40,5 +40,5 @@ public class UsuarioController {
         user.setPassword(usuario.getPassword());
         user.setEmail(usuario.getEmail());
         return usuarioServ.saveUsuario(user);
-    }    
+    }  */  
 }
