@@ -22,7 +22,14 @@ public class IdiomaService implements IIdiomaService {
     public Idioma saveIdioma(Idioma idioma) {
         return idiomaRepo.save(idioma);
     }
-
+    
+     @Override
+    public Idioma createIdioma(Idioma idioma) {
+        Long count = idiomaRepo.count();
+        idioma.setOrden((int) (count+1));
+        return idiomaRepo.save(idioma);
+    }
+    
     @Override
     public List<Idioma> deleteIdioma(Long id) {
         idiomaRepo.deleteById(id);
