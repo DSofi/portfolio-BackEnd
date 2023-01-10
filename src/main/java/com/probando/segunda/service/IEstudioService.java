@@ -10,4 +10,5 @@ public interface IEstudioService {
     public List<Estudio> deleteEstudio (Long id);
     public Estudio findEstudio (Long id);  
     public List<Estudio> orderEstudios(List<Estudio> estudios);
+    public Estudio createEstudio(Estudio est);
 }
