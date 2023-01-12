@@ -8,6 +8,7 @@ com\probando\segunda\security\JWTAuthorizationFilter.class
 com\probando\segunda\controller\PersonaController.class
 com\probando\segunda\model\Usuario.class
 com\probando\segunda\service\ProyectoService.class
+com\probando\segunda\model\Email.class
 com\probando\segunda\service\UploadImageService.class
 com\probando\segunda\model\Proyecto.class
 com\probando\segunda\repository\SkillRepository.class
@@ -18,6 +19,7 @@ com\probando\segunda\security\UserDetailServiceImpl.class
 com\probando\segunda\service\IProyectoService.class
 com\probando\segunda\repository\IdiomaRepository.class
 com\probando\segunda\SegundaApplication.class
+com\probando\segunda\service\EmailService.class
 com\probando\segunda\controller\ExperienciaController.class
 com\probando\segunda\repository\ExperienciaRepository.class
 com\probando\segunda\service\IdiomaService.class
@@ -34,8 +36,10 @@ com\probando\segunda\service\IUploadImageService.class
 com\probando\segunda\repository\ProyectoRepository.class
 com\probando\segunda\service\UsuarioService.class
 com\probando\segunda\repository\PersonaRepository.class
+com\probando\segunda\service\IEmailService.class
 com\probando\segunda\service\PersonaService.class
 com\probando\segunda\model\Skill.class
+com\probando\segunda\controller\EmailController.class
 com\probando\segunda\SegundaApplication$1.class
 com\probando\segunda\controller\IdiomaController.class
 com\probando\segunda\controller\ProyectoController.class

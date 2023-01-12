@@ -9,8 +9,10 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\TipoSkillController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\Proyecto.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\JWTAuthenticationFilter.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\Email.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\Skill.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\UsuarioController.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\EmailController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IEstudioService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\AuthCredentials.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\IdiomaController.java
@@ -30,8 +32,10 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\SkillService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\PersonaController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\UsuarioService.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IEmailService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\UserDetailsImpl.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\repository\ExperienciaRepository.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\EmailService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\repository\SkillRepository.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IPersonaService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\JWTAuthorizationFilter.java
