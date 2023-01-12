@@ -1,29 +1,28 @@
 
 package com.probando.segunda.model;
 
-import lombok.Data;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-
-@Data
 @Getter @Setter
 public class Email {
     
+    @NotNull
     private String fromEmail;
+    
+    @NotNull
     private String nombre;
-    private String body;
+    
+    @NotNull
+    private String mensaje;   
 
     public Email() {
     }
 
-    public Email(String fromEmail, String nombre, String body) {
+    public Email(String fromEmail, String nombre, String mensaje) {
         this.fromEmail = fromEmail;
         this.nombre = nombre;
-        this.body = body;
+        this.mensaje = mensaje;
     }
-    
-    
-    
-}    
-
+}

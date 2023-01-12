@@ -13,9 +13,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ExperienciaRepository extends JpaRepository <Experiencia, Long> {
     
-    @Modifying
-    @Query("UPDATE Experiencia e SET e.orden = :orden WHERE e.id = :id")
     @Transactional
+    @Modifying
+    @Query("UPDATE Experiencia e SET e.orden = :orden WHERE e.id = :id")    
     void updateOrden(@Param("id") Long id, @Param("orden") int orden);
     
     @Query("SELECT e FROM Experiencia e ORDER BY e.orden ASC")

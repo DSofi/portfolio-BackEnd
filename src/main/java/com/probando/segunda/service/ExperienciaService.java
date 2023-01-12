@@ -22,6 +22,13 @@ public class ExperienciaService implements IExperienciaService{
     public Experiencia saveExperiencia(Experiencia exp) {
         return experienciaRepo.save(exp);
     }
+    
+    @Override
+    public Experiencia createExperiencia(Experiencia exp){
+        Long count = experienciaRepo.count();
+        exp.setOrden((int) (count+1));
+        return experienciaRepo.save(exp);
+    }
 
     @Override
     public List<Experiencia> deleteExperiencia(Long id) {

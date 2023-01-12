@@ -13,9 +13,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IdiomaRepository  extends JpaRepository <Idioma, Long>{
     
+    @Transactional
     @Modifying
     @Query("UPDATE Idioma i SET i.orden = :orden WHERE i.id = :id")
-    @Transactional
     void updateOrden(@Param("id") Long id, @Param("orden") int orden);
     
     @Query("SELECT i FROM Idioma i ORDER BY i.orden ASC")

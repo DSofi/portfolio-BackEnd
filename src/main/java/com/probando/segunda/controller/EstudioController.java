@@ -29,7 +29,7 @@ public class EstudioController {
     @PostMapping ("/estudios")
     @ResponseBody
     public Estudio createEstudio(@RequestBody Estudio est){
-       return estudioServ.saveEstudio(est);
+       return estudioServ.createEstudio(est);
     }
     
     @DeleteMapping ("/estudios/{id}")

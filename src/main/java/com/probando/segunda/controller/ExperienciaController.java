@@ -29,7 +29,7 @@ public class ExperienciaController {
     @PostMapping ("/experiencias")
     @ResponseBody
     public Experiencia createExperiencia(@RequestBody Experiencia exp){
-       return experienciaServ.saveExperiencia(exp);
+       return experienciaServ.createExperiencia(exp);
     }
     
      @DeleteMapping ("/experiencias/{id}")
