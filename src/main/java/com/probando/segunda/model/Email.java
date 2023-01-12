@@ -1,12 +1,28 @@
 
 package com.probando.segunda.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter @Setter
 public class Email {
     
-    @Autowired
-    private MailSender mailSender;
+    @NotNull
+    private String fromEmail;
     
+    @NotNull
+    private String nombre;
+    
+    @NotNull
+    private String mensaje;   
+
+    public Email() {
+    }
+
+    public Email(String fromEmail, String nombre, String mensaje) {
+        this.fromEmail = fromEmail;
+        this.nombre = nombre;
+        this.mensaje = mensaje;
+    }
 }
