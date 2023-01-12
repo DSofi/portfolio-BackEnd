@@ -2,6 +2,7 @@
 package com.probando.segunda.controller;
 
 import com.probando.segunda.model.Email;
+import com.probando.segunda.model.RestResponse;
 import com.probando.segunda.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ public class EmailController {
     private EmailService emailServ;
     
     @PostMapping("/enviar-mail")
-    public ResponseEntity<String> enviarEmail(@RequestBody Email email){
+    public ResponseEntity<RestResponse> enviarEmail(@RequestBody Email email){
         return emailServ.enviarEmail(email);
     }
     

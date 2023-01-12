@@ -2,7 +2,9 @@
 package com.probando.segunda.service;
 
 import com.probando.segunda.model.Email;
+import com.probando.segunda.model.RestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,7 +17,7 @@ public class EmailService implements IEmailService{
     private MailSender mailSender;
     
     @Override
-    public ResponseEntity<String> enviarEmail(Email email){
+    public ResponseEntity<RestResponse> enviarEmail(Email email){
         SimpleMailMessage mensaje = new SimpleMailMessage();
         mensaje.setTo("ap.dsofi@gmail.com");
         mensaje.setFrom(email.getFromEmail());
@@ -30,6 +32,6 @@ public class EmailService implements IEmailService{
         confMail.setText("Esto es un mensaje de confirmación, gracias por ver mi portfolio y escribirme, pronto estaré respondiendo.\n \nSaludos, \nSofi . ");
         mailSender.send(confMail);
         
-        return ResponseEntity.ok("Email enviado correctamente");
+        return new ResponseEntity<>(new RestResponse("success", "Email enviado correctamente"), HttpStatus.OK);
     }    
 }

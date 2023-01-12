@@ -42,6 +42,7 @@ com\probando\segunda\model\Skill.class
 com\probando\segunda\controller\EmailController.class
 com\probando\segunda\SegundaApplication$1.class
 com\probando\segunda\controller\IdiomaController.class
+com\probando\segunda\model\RestResponse.class
 com\probando\segunda\controller\ProyectoController.class
 com\probando\segunda\controller\EstudioController.class
 com\probando\segunda\controller\TipoSkillController.class
