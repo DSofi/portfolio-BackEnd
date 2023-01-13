@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +19,11 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @NotNull
     private String tiempo;
+    @NotNull
     private String titulo;
+    @NotNull
     private String descripcion;
     private String otrasNotas;
     private String imagen;   
