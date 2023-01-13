@@ -29,7 +29,7 @@ public class IdiomaController {
     @PostMapping ("/idiomas")
     @ResponseBody
     public Idioma createIdioma(@RequestBody Idioma idioma){
-       return idiomaServ.saveIdioma(idioma);
+       return idiomaServ.createIdioma(idioma);
     }
     
     @DeleteMapping ("/idiomas/{id}")

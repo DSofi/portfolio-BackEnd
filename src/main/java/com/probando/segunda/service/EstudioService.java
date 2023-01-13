@@ -1,4 +1,4 @@
-
+ 
 package com.probando.segunda.service;
 
 import com.probando.segunda.model.Estudio;
@@ -20,6 +20,13 @@ public class EstudioService implements IEstudioService {
 
     @Override
     public Estudio saveEstudio(Estudio est) {
+        return estudioRepo.save(est);
+    }
+    
+    @Override
+    public Estudio createEstudio(Estudio est){
+        Long count = estudioRepo.count();
+        est.setOrden((int) (count+1));
         return estudioRepo.save(est);
     }
 

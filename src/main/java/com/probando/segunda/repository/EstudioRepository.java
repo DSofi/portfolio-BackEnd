@@ -13,9 +13,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EstudioRepository extends JpaRepository <Estudio, Long> {
     
-    @Modifying
-    @Query("UPDATE Estudio e SET e.orden = :orden WHERE e.id = :id")
     @Transactional
+    @Modifying
+    @Query("UPDATE Estudio e SET e.orden = :orden WHERE e.id = :id")    
     void updateOrden(@Param("id") Long id, @Param("orden") int orden);
     
     @Query("SELECT e FROM Estudio e ORDER BY e.orden ASC")
