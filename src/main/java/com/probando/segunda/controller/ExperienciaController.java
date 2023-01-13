@@ -45,6 +45,7 @@ public class ExperienciaController {
         exp.setTitulo(experiencia.getTitulo());
         exp.setDescripcion(experiencia.getDescripcion());
         exp.setOtrasNotas(experiencia.getOtrasNotas());
+        exp.setImagen(experiencia.getImagen());
         exp.setEditar(false);
     return experienciaServ.saveExperiencia(exp);
     }    

@@ -46,6 +46,7 @@ public class EstudioController {
         est.setTitulo(estudio.getTitulo());
         est.setDescripcion(estudio.getDescripcion());
         est.setOtrasNotas(estudio.getOtrasNotas());
+        est.setImagen(estudio.getImagen());
         est.setEditar(false);
     return estudioServ.saveEstudio(est);
     }

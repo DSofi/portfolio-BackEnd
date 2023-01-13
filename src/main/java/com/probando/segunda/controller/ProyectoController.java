@@ -45,6 +45,7 @@ public class ProyectoController {
         proy.setTitulo(proyecto.getTitulo());
         proy.setDescripcion(proyecto.getDescripcion());
         proy.setOtrasNotas(proyecto.getOtrasNotas());
+        proy.setImagen(proyecto.getImagen());
         proy.setLinkGithub(proyecto.getLinkGithub());
         proy.setLink(proyecto.getLink());
         proy.setEditar(false);

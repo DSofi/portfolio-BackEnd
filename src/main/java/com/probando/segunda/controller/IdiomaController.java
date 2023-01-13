@@ -46,6 +46,7 @@ public class IdiomaController {
         idio.setTitulo(idioma.getTitulo());
         idio.setDescripcion(idioma.getDescripcion());
         idio.setOtrasNotas(idioma.getOtrasNotas());
+        idio.setImagen(idioma.getImagen());
         idio.setEditar(false);
     return idiomaServ.saveIdioma(idio);
     }
