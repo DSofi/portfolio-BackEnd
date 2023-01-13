@@ -1,13 +1,10 @@
 
 package com.probando.segunda.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import java.util.List;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,21 +15,16 @@ public class Tiposkill {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name="tiposkill_id")
     private Long id;
     
     @NotNull
     private String nombre;
     
-    @OneToMany(mappedBy = "tiposkill")
-    private List<Skill> skills;
-
     public Tiposkill() {
     }
 
-    public Tiposkill(Long id, String nombre, List<Skill> skills) {
+    public Tiposkill(Long id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.skills = skills;
     }
 }
