@@ -37,7 +37,7 @@ public class WebSecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.GET, "/estudios", "/experiencias", "/personas", "/proyectos", "/idiomas", "/skills", "/tipo-skills").permitAll()
-                .requestMatchers(HttpMethod.POST, "/send-email").permitAll()
+                .requestMatchers(HttpMethod.POST, "/enviar-mail").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
