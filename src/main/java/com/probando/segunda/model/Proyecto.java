@@ -25,6 +25,8 @@ public class Proyecto {
     @NotNull
     private String descripcion;
     private String otrasNotas;
+    private String linkGithub;
+    private String link;
     private String imagen;   
     private boolean editar;
     private int orden;
@@ -36,15 +38,19 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String tiempo, String titulo, String descripcion, String otrasNotas, String imagen, boolean editar, int orden, Persona persona) {
+    public Proyecto(Long id, String tiempo, String titulo, String descripcion, String otrasNotas, String linkGithub, String link, String imagen, boolean editar, int orden, Persona persona) {
         this.id = id;
         this.tiempo = tiempo;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.otrasNotas = otrasNotas;
+        this.linkGithub = linkGithub;
+        this.link = link;
         this.imagen = imagen;
         this.editar = editar;
         this.orden = orden;
         this.persona = persona;
-    }    
+    }
+
+    
 }

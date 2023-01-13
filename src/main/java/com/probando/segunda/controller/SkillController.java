@@ -30,7 +30,7 @@ public class SkillController {
     @PostMapping("/skills")
     @ResponseBody
     public Skill createSkill(@RequestBody Skill skill){             
-        return skillServ.saveSkill(skill);
+        return skillServ.createSkill(skill);
     }
     
     @DeleteMapping("/skills/{id}")

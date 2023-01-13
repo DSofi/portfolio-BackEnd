@@ -22,6 +22,12 @@ public class ProyectoService implements IProyectoService{
     public Proyecto saveProyecto(Proyecto proy) {
         return proyectoRepo.save(proy);
     }
+    
+    @Override
+    public Proyecto createProyecto(Proyecto proy) {
+        proy.setOrden(-1);
+        return proyectoRepo.save(proy);
+    }
 
     @Override
     public List<Proyecto> deleteProyecto(Long id) {

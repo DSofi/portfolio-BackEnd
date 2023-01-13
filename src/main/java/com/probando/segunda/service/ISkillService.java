@@ -7,7 +7,8 @@ import java.util.List;
 public interface ISkillService {
     public List<Skill> getSkills();
     public Skill saveSkill(Skill skill);
+    public Skill createSkill (Skill skill);
     public List<Skill> deleteSkill (Long id);
     public Skill findSkill (Long id);
-    public List<Skill> orderSkills(List<Skill> skills);
+    public List<Skill> orderSkills(List<Skill> skills);    
 }

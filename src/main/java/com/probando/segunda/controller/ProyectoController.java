@@ -29,7 +29,7 @@ public class ProyectoController {
     @PostMapping ("/proyectos")
     @ResponseBody
     public Proyecto createProyecto(@RequestBody Proyecto proy){
-        return proyectoServ.saveProyecto(proy);
+        return proyectoServ.createProyecto(proy);
     }
     
     @DeleteMapping ("/proyectos/{id}")
@@ -45,6 +45,8 @@ public class ProyectoController {
         proy.setTitulo(proyecto.getTitulo());
         proy.setDescripcion(proyecto.getDescripcion());
         proy.setOtrasNotas(proyecto.getOtrasNotas());
+        proy.setLinkGithub(proyecto.getLinkGithub());
+        proy.setLink(proyecto.getLink());
         proy.setEditar(false);
         return proyectoServ.saveProyecto(proy);
     }

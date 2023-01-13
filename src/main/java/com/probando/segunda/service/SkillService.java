@@ -22,6 +22,13 @@ public class SkillService implements ISkillService {
     public Skill saveSkill(Skill skill) {
         return skillRepo.save(skill);
     }
+    
+    @Override
+    public Skill createSkill(Skill skill) {
+        Long count = skillRepo.count();
+        skill.setOrden((int) (count+1));
+        return skillRepo.save(skill);
+    }
 
     @Override
     public List<Skill> deleteSkill(Long id) {
