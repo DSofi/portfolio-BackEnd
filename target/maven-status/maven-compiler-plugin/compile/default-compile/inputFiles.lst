@@ -14,6 +14,7 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\UsuarioController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\RestResponse.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\EmailController.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\configuration\OpenAPIConfig.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IEstudioService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\AuthCredentials.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\IdiomaController.java

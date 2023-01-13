@@ -23,7 +23,7 @@ public class Idioma {
     private String tiempo;
     @NotNull
     private String titulo;
-    
+    @NotNull
     private String descripcion;
     private String otrasNotas;
     private String imagen;   

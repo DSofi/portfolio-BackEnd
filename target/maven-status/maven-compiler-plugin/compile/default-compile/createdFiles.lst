@@ -1,3 +1,4 @@
+com\probando\segunda\configuration\OpenAPIConfig.class
 com\probando\segunda\service\EstudioService.class
 com\probando\segunda\repository\TipoSkillRepository.class
 com\probando\segunda\security\WebSecurityConfig.class

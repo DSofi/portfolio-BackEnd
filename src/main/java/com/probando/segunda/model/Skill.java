@@ -16,12 +16,11 @@ import lombok.Setter;
 public class Skill {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)    
     private Long id;
     
     @NotNull
-    private String nombre;
-    
+    private String nombre;    
     @NotNull
     private String imagen;    
     private int orden;
