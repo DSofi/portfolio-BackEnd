@@ -18,12 +18,13 @@ public class EmailService implements IEmailService{
     private MailSender mailSender;
     
     @Autowired
-    private Environment env;
+    private Environment env;   
     
-    String emailEmail = env.getProperty("EMAIL_EMAIL");
     
     @Override
     public ResponseEntity<RestResponse> enviarEmail(Email email){
+        String emailEmail = env.getProperty("EMAIL_EMAIL");
+        
         SimpleMailMessage mensaje = new SimpleMailMessage();
         mensaje.setTo( emailEmail);
         mensaje.setFrom(email.getFromEmail());

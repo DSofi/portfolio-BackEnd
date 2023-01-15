@@ -36,6 +36,7 @@ com\probando\segunda\repository\ProyectoRepository.class
 com\probando\segunda\service\UsuarioService.class
 com\probando\segunda\repository\PersonaRepository.class
 com\probando\segunda\service\IEmailService.class
+com\probando\segunda\configuration\EnvConfig.class
 com\probando\segunda\service\PersonaService.class
 com\probando\segunda\model\Skill.class
 com\probando\segunda\controller\EmailController.class

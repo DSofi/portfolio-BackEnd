@@ -2,7 +2,6 @@ package com.probando.segunda;
 
 import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,27 +14,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class SegundaApplication {
     
-     @Autowired
-    private Environment env;
-    
-    String emailEmail = env.getProperty("EMAIL_EMAIL");
-    String emailPassword = env.getProperty("EMAIL_PASSWORD");
-    String dataSourceUrl = env.getProperty("DATASOURCE_URL");
-    String dataSourceUsername = env.getProperty("DATASOURCE_USERNAME");
-    String dataSourcePassword = env.getProperty("DATASOURCE_PASSWORD");
+    @Autowired
+    private Environment env;      
 
     public static void main(String[] args) {
             SpringApplication.run(SegundaApplication.class, args);
-    }
+    }  
     
-@Value("${EMAIL_EMAIL}")
-String pruebaEmail;
-
-@Value("${DATASOURCE_URL}")
-String pruebaDataSourceUrl;
-
         
-@Bean
+    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -50,6 +37,9 @@ String pruebaDataSourceUrl;
     
     @Bean
     public JavaMailSender getJavaMailSender() {
+        String emailEmail = env.getProperty("EMAIL_EMAIL");
+        String emailPassword = env.getProperty("EMAIL_PASSWORD");
+    
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
@@ -64,6 +54,6 @@ String pruebaDataSourceUrl;
         props.put("mail.debug", "true");
 
         return mailSender;
-}
+    }
 
 }
