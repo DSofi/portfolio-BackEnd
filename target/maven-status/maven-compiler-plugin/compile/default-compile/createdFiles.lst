@@ -10,7 +10,6 @@ com\probando\segunda\controller\PersonaController.class
 com\probando\segunda\model\Usuario.class
 com\probando\segunda\service\ProyectoService.class
 com\probando\segunda\model\Email.class
-com\probando\segunda\service\UploadImageService.class
 com\probando\segunda\model\Proyecto.class
 com\probando\segunda\repository\SkillRepository.class
 com\probando\segunda\repository\UsuarioRepository.class
@@ -33,7 +32,6 @@ com\probando\segunda\security\TokenUtils.class
 com\probando\segunda\security\JWTAuthenticationFilter.class
 com\probando\segunda\service\IUsuarioService.class
 com\probando\segunda\repository\EstudioRepository.class
-com\probando\segunda\service\IUploadImageService.class
 com\probando\segunda\repository\ProyectoRepository.class
 com\probando\segunda\service\UsuarioService.class
 com\probando\segunda\repository\PersonaRepository.class
