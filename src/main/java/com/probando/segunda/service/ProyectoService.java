@@ -25,7 +25,14 @@ public class ProyectoService implements IProyectoService{
     
     @Override
     public Proyecto createProyecto(Proyecto proy) {
-        proy.setOrden(-1);
+        List<Proyecto> proyectos = proyectoRepo.findAllOrdered();
+        if(!proyectos.isEmpty()){
+            Proyecto first = proyectos.get(0);
+            int orden = first.getOrden()-1;
+            proy.setOrden(orden);
+        }else{
+            proy.setOrden(0);
+        }
         return proyectoRepo.save(proy);
     }
 

@@ -19,12 +19,14 @@ public class Tiposkill {
     
     @NotNull
     private String nombre;
+    private int orden;
     
     public Tiposkill() {
     }
 
-    public Tiposkill(Long id, String nombre) {
+    public Tiposkill(Long id, String nombre, int orden) {
         this.id = id;
         this.nombre = nombre;
-    }
+        this.orden = orden;
+    }    
 }
