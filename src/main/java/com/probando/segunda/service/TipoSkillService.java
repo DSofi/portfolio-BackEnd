@@ -15,7 +15,7 @@ public class TipoSkillService implements ITipoSkillService {
 
     @Override
     public List<Tiposkill> getTipoSkills() {
-        return tipoSkillRepo.findAll();
+        return tipoSkillRepo.findAllOrdered();
     }
 
     @Override
@@ -26,11 +26,22 @@ public class TipoSkillService implements ITipoSkillService {
     @Override
     public List<Tiposkill> deleteTipoSkill(Long id) {
         tipoSkillRepo.deleteById(id);
-        return tipoSkillRepo.findAll();
+        return tipoSkillRepo.findAllOrdered();
     }
 
     @Override
     public Tiposkill findTipoSkill(Long id) {
         return tipoSkillRepo.findById(id).orElse(null);
     }    
+    
+    @Override
+    public List<Tiposkill> orderSkills(List<Tiposkill> tiposSkills) {
+    for (int i = 0; i < tiposSkills.size(); i++) {
+            Tiposkill tiposkill = tiposSkills.get(i);
+            tiposkill.setOrden(i);
+            tipoSkillRepo.save(tiposkill); 
+             tipoSkillRepo.updateOrden(tiposkill.getId(), i);
+        }
+       return tipoSkillRepo.findAllOrdered();
+    }   
 }

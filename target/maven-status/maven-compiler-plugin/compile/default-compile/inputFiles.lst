@@ -28,7 +28,6 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\ITipoSkillService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\ProyectoController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\ExperienciaController.java
-D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\UploadImageService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\repository\ProyectoRepository.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\ProyectoService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\SkillService.java
@@ -43,7 +42,6 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\security\JWTAuthorizationFilter.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\Idioma.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\model\Tiposkill.java
-D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IUploadImageService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IUsuarioService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\SkillController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\TipoSkillService.java
