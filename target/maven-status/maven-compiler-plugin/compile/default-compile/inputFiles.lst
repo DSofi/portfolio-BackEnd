@@ -20,6 +20,7 @@ D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\IdiomaController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\ExperienciaService.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\service\IIdiomaService.java
+D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\configuration\EnvConfig.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\controller\EstudioController.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\repository\IdiomaRepository.java
 D:\Documents\_Cursos\Argentina Programa\08 - Backend con Springboot\segunda\src\main\java\com\probando\segunda\repository\TipoSkillRepository.java

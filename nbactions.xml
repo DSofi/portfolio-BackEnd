@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.0.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>${packageClassName}</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <DATASOURCE_URL>jdbc:mysql://blg2hmvjd1t0bzlaepl8-mysql.services.clever-cloud.com:3306/blg2hmvjd1t0bzlaepl8?useSSL=false&amp;serverTimezone=UTC</DATASOURCE_URL>
+                <DATASOURCE_USERNAME>urjblmmzi0dotuou</DATASOURCE_USERNAME>
+                <DATASOURCE_PASSWORD>xC6VjBjYN4tyBtU8Gujq</DATASOURCE_PASSWORD>
+            </properties>
+        </action>
+    </actions>
