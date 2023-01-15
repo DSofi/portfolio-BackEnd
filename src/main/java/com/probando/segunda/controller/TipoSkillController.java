@@ -44,4 +44,10 @@ public class TipoSkillController {
         tipoSk.setNombre(tipoSkill.getNombre());
         return tipoSkillServ.saveTipoSkill(tipoSk);
     }    
+    
+    @PutMapping("/tipo-skills/order")
+    @ResponseBody
+    public List<Tiposkill> orderSkills(@RequestBody List<Tiposkill> tiposSkills){
+        return tipoSkillServ.orderSkills(tiposSkills);
+    }
 }
